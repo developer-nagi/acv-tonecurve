@@ -1,6 +1,6 @@
 {
   "name": "acv-tonecurve",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reads Photoshop acv files.",
   "main": "index.js",
   "scripts": {
