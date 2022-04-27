@@ -3,14 +3,14 @@
 [![Build Status](https://app.travis-ci.com/Nagi-Fuyumi/acv-tonecurve.svg?branch=main)](https://app.travis-ci.com/Nagi-Fuyumi/acv-tonecurve)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
-[Japanese](README_ja)
+[English](README)
 
 ## About
 
-### Module for adapting AdobePhotoshop tone curve preset files to image binary pixel data in Node.js.
+### Node.js で画像バイナリピクセルデータに AdobePhotoshop のトーンカーブプリセットファイルを適応するためのモジュールです
 
-It is built with TypeScript and requires no exceptional build.  
-It can be installed with the following commands.
+すべて TypeScript で構築されており、特殊なビルドは必要ありません  
+下記のコマンドでインストール可能です
 
 ```bash
 npm i acv-tonecurve
@@ -18,16 +18,17 @@ npm i acv-tonecurve
 
 ## Sample
 
-Please install _node-canvas_ module.
+別途 _node-canvas_ モジュールをインストールしてください
 
 ```bash
 npm i canvas
 ```
 
-Easy to use.  
-First, when instantiating _AcvToneCurve_, pass the filename as an argument.  
-Then pass the binary data obtained from the image data to the _doCurves_ function.  
-Pass the rewritten data against the _ctx_ context and rewrite _canvas_.
+利用方法は簡単です  
+まずは、_AcvToneCurve_ をインスタンス化する際に引数にファイル名を渡してください  
+その後、画像データから得られるバイナリデータを _doCurves_ 関数に渡してください  
+（参照で渡されることに注意してください）  
+_ctx_ コンテキストに対して書き換えたデータを渡し、_canvas_ を書き換えてください
 
 **TypeScript**
 
@@ -129,12 +130,12 @@ test("test", async () => {
 
 ## Resources
 
-Here is a list of resources we consulted in creating acv-tonecurve.  
-We are very grateful to them.
+acv-tonecurve を制作するきっかけになった方々です。
+構想を使用をさせていただきありがとうございます。
 
 Monotonic Spline Curves - http://blog.mackerron.com/2011/01/01/javascript-cubic-splines/  
 jQuery-filter.me - https://github.com/MatthewRuddy/jQuery-filter.me
 
 ## Change
 
-- 04/28/2022 Fixed a bug that caused an error when requiring as JS.
+- 2022/04/28 JS として require するとエラーになる不具合の修正

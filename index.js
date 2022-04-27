@@ -9,6 +9,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.AcvToneCurve = void 0;
 const MonotonicCubicSpline_1 = __importDefault(require("./lib/MonotonicCubicSpline"));
 const ReadACV_1 = __importDefault(require("./lib/ReadACV"));
 const ArrayUtil_1 = __importDefault(require("./lib/ArrayUtil"));
@@ -68,4 +69,5 @@ class AcvToneCurve {
         this._curves = this._getCurves(this._acv.getPoints());
     }
 }
+exports.AcvToneCurve = AcvToneCurve;
 exports.default = AcvToneCurve;

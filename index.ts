@@ -10,7 +10,7 @@ import readACV, { ACV_POINTS, ACV_POINT } from "./lib/ReadACV";
 import ArrayUtil from "./lib/ArrayUtil";
 import { ALPHA_POINTS } from "./lib/ALPHA_POINTS";
 
-export default class AcvToneCurve {
+export class AcvToneCurve {
   private _curves: ALPHA_POINTS;
   private _acv: readACV;
 
@@ -80,3 +80,5 @@ export default class AcvToneCurve {
     }
   };
 }
+
+export default AcvToneCurve;
